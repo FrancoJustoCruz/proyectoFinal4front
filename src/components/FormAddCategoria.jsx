@@ -18,7 +18,7 @@ const FormAddCategoria = () => {
         try {
             const response = await axios.post('http://localhost:3000/api/categorias', { nombre });
             console.log('Categoria agregada:', response.data);
-            navigate('/categorias'); // Redirigir a la lista de categorías después de agregar
+            navigate('/categorias'); 
         } catch (error) {
             console.error('Error al agregar categoría:', error);
             setError(error.response.data.error || 'Error al procesar la solicitud.');

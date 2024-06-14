@@ -93,7 +93,7 @@ const IncidenciaList = () => {
         }
     };
 
-    // Función para obtener el nombre de la categoría
+    
     const getCategoriaNombre = (categoriaId) => {
         const categoria = categorias.find(cat => cat.id === categoriaId);
         return categoria ? categoria.nombre : 'Sin categoría';
@@ -166,7 +166,7 @@ const IncidenciaList = () => {
             <Modal isOpen={modalOpen} onClose={closeModal}>
                 <div className="text-lg font-semibold mb-2">Descripción:</div>
                 <p className="text-gray-800">{selectedIncidencia?.descripcion}</p>
-                {selectedIncidencia?.imagen && ( // Mostrar imagen si está disponible
+                {selectedIncidencia?.imagen && ( 
                     <div className="mt-4">
                         <div className="text-lg font-semibold mb-2">Imagen:</div>
                         <img src={`http://localhost:3000/uploads/${selectedIncidencia.imagen}`} alt="Incidencia Imagen" className="max-w-full h-auto" />

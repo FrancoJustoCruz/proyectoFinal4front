@@ -9,7 +9,7 @@ const EditCategorias = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { isError } = useSelector((state) => state.auth);
-    const { id } = useParams(); // Obtener el parámetro de la URL (id de la categoría a editar)
+    const { id } = useParams(); 
 
     useEffect(() => {
         dispatch(getMe());

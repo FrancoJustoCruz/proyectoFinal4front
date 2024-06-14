@@ -10,7 +10,7 @@ const FormEditCategoria = ({ categoryId }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Función para obtener los detalles de la categoría por su ID
+        
         const fetchCategoria = async () => {
             try {
                 const response = await axios.get(`http://localhost:3000/api/categorias/${categoryId}`);
@@ -21,14 +21,14 @@ const FormEditCategoria = ({ categoryId }) => {
             }
         };
         
-        fetchCategoria(); // Llamar a la función al montar el componente
-    }, [categoryId]); // Dependencia para volver a obtener los detalles si cambia el ID de la categoría
+        fetchCategoria(); 
+    }, [categoryId]); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await axios.put(`http://localhost:3000/api/categorias/${categoryId}`, { nombre });
-            navigate('/categorias'); // Redirigir a la lista de categorías después de editar
+            navigate('/categorias'); 
         } catch (error) {
             console.error('Error al editar la categoría:', error);
             setError('Error al procesar la solicitud.');

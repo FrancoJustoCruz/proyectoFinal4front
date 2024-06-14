@@ -11,7 +11,7 @@ import EditProduct from './pages/EditProduct';
 import Incidencias from './pages/Incidencias';
 import AddIncidencia from './pages/AddIncidencia';
 import EditIncidencia from './pages/EditIncidencia';
-import Categorias from './pages/Categorias'; // Importa el componente de Categorias
+import Categorias from './pages/Categorias'; 
 import AddCategorias from './pages/AddCategorias'
 import EditCategorias from './pages/EditCategorias'
 
@@ -31,7 +31,6 @@ function App() {
           <Route path="/incidencias" element={<Incidencias />} />
           <Route path="/incidencias/add" element={<AddIncidencia />} />
           <Route path="/incidencias/edit/:id" element={<EditIncidencia />} />
-          {/* Agregar ruta para Categorías */}
           <Route path="/categorias" element={<Categorias />} />
           <Route path="/categorias/add" element={<AddCategorias />} />
           <Route path="/categorias/edit/:id" element={<EditCategorias />} />

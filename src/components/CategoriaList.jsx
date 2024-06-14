@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Modal from './Modal'; // Asegúrate de tener implementado el componente Modal
+import Modal from './Modal'
 import { useDispatch, useSelector } from 'react-redux';
 
 const CategoriaList = () => {

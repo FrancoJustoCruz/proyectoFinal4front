@@ -17,11 +17,11 @@ const FormAddIncidencia = () => {
     useEffect(() => {
         fetchCategorias();
 
-        // Escuchar el evento 'incidenciaCreada' desde el servidor
+       
         socket.on('incidenciaCreada', handleIncidenciaCreada);
 
         return () => {
-            // Desuscribirse del evento 'incidenciaCreada' al desmontar el componente
+            
             socket.off('incidenciaCreada', handleIncidenciaCreada);
         };
     }, []);
@@ -63,13 +63,13 @@ const FormAddIncidencia = () => {
         }
     };
 
-    // Manejador para el evento 'incidenciaCreada'
+    
     const handleIncidenciaCreada = (incidencia) => {
-        // Mostrar notificación de incidencia creada
+        
         setMsg(`¡Incidencia creada exitosamente! ID: ${incidencia.id}`);
     };
 
-    // Función para capitalizar la primera letra de la descripción
+    
     const capitalizeFirstLetter = (str) => {
         return str.charAt(0).toUpperCase() + str.slice(1);
     };
